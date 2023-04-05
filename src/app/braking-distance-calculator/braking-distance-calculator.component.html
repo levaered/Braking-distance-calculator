@@ -1,0 +1,68 @@
+<div class="braking-distance-calculator-wrapper">
+  <span>Stopping Distance Calculator</span>
+  <div class="input-group mb-3">
+    <span class="input-group-text">V<sub>0</sub></span>
+    <input
+      [(ngModel)]="killometrs"
+      type="text"
+      class="form-control"
+      placeholder="Начальная скорость"
+      aria-label="Начальная скорость"
+      aria-describedby="basic-addon2"
+    />
+    <span class="input-group-text" id="basic-addon2">м/с</span>
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text">t<sub>hp</sub></span>
+    <input
+      [(ngModel)]="perceptionTime"
+      type="text"
+      class="form-control"
+      placeholder="Время восприятия опасности водителем"
+      aria-label="Время восприятия опасности водителем"
+      aria-describedby="basic-addon2"
+    />
+    <span class="input-group-text" id="basic-addon2">c</span>
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text">t<sub>hr</sub></span>
+    <input
+      [(ngModel)]="reactionTime"
+      type="text"
+      class="form-control"
+      placeholder="Время реакции водителя"
+      aria-label="Время реакции водителя"
+      aria-describedby="basic-addon2"
+    />
+    <span class="input-group-text" id="basic-addon2">с</span>
+  </div>
+  <div>
+    Состояние дороги
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {{roadConditionsString}}
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" (click)="optionRoad1()" href="#">Cухой асфальт</a></li>
+        <li><a class="dropdown-item" (click)="optionRoad2()" href="#">Мокрый асфальт</a></li>
+        <li><a class="dropdown-item" (click)="optionRoad3()" href="#">Покрытый снегом асфальт</a></li>
+        <li><a class="dropdown-item" (click)="optionRoad4()" href="#">Покрытый льдом асфальтт</a></li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    Тип привода тормозов
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {{brakingTypeString}}
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" (click)="optionBreaking1()" href="#">Пневматический</a></li>
+        <li><a class="dropdown-item" (click)="optionBreaking2()" href="#">Гидравлический</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <button (click)="result()" type="button" class="btn btn-primary">Расчитать</button>
+  <div>Result: {{finalResult}}</div>
+</div>

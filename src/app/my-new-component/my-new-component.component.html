@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div>
+    <div class="cardGif" style="width: 18rem;" [ngClass]="[cardGifStyle]">
+      <div class="card-body" >
+      </div>
+    </div>
+  
+  <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" id="text" *ngIf="displayText">{{displayText}}</h5>
+      </div>
+  </div>
+  <app-timer></app-timer>
+ 
+  <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary" [ngClass]="[btnStyle]" (click)="onClickMorning()">Good Morning</button>
+      <button type="button" class="btn btn-primary" [ngClass]="[btnStyle]" (click)="onClickEvening()">Good Evening</button>
+  </div>
+  </div>
+  <app-braking-distance-calculator></app-braking-distance-calculator>
+</div>

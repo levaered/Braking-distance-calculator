@@ -1,0 +1,41 @@
+.btn-primary{
+    width: 100%;
+}
+.btn-group{
+    width: 100%;
+}
+.card{
+    margin-bottom: 1rem;
+}
+.cardGif{
+    margin-bottom: 1rem;
+    padding: 3rem;
+    background-image: url('https://i.pinimg.com/originals/5e/c9/6c/5ec96c6e8ffc4e99c73aa984eb2ac5c5.gif');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.cardGifNight{
+    margin-bottom: 1rem;
+    padding: 3rem;
+    background-image: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.btn-default {
+    color: rgb(44, 44, 44);
+    background-color: rgb(255, 193, 70);
+    border-color: rgba(44, 44, 44, 0.397);
+  }
+  
+  .btn-change {
+    color: rgb(246, 246, 246);
+    background-color: rgb(19, 35, 80);
+    border-color: rgb(246, 246, 246, 0.397);
+  } 
+  .wrapper{
+    display: flex;
+    gap: 1rem;
+    
+  }
